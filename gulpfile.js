@@ -11,55 +11,21 @@ var gulp = require('gulp'),
     csscomb = require('gulp-csscomb'),
     jscs = require('gulp-jscs');
 
-var css_vendors = [
-    'static/vendors/FancySelect/fancySelect.css',
-    'static/vendors/slick/slick.css',
-    'static/vendors/jquery-ui-1.12.0.custom/jquery-ui.min.css',
-];
+var css_vendors = 'static/vendors/**/*.css';
 
 var js_vendors = [
     'static/vendors/jquery-2.1.4.min/jquery-2.1.4.min.js',
-    'static/vendors/jquery-ui-1.12.0.custom/jquery-ui.min.js',
-    'static/vendors/FancySelect/fancySelect.js',
-    'static/vendors/slick/slick.min.js',
-    'static/vendors/webcamjs/webcam.min.js',
+    'static/vendors/other/*.js'
 ];
 
 var css_files = [
-    'static/desktop/css/form.css',
-    'static/desktop/css/table.css',
-    'static/desktop/css/select.css',
-    'static/desktop/css/pagination.css',
-    'static/desktop/css/bookmark.css',
-    'static/desktop/css/header.css',
-    'static/desktop/css/footer.css',
-    'static/desktop/css/main-exchange.css',
-    'static/desktop/css/main-features.css',
-    'static/desktop/css/main-description.css',
-    'static/desktop/css/main-reviews.css',
-    'static/desktop/css/main-news.css',
-    'static/desktop/css/step2.css',
-    'static/desktop/css/step3.css',
-    'static/desktop/css/order_completed.css',
-    'static/desktop/css/order_processing.css',
-    'static/desktop/css/sign_up.css',
-    'static/desktop/css/log_in.css',
-    'static/desktop/css/rates.css',
-    'static/desktop/css/contacts.css',
-    'static/desktop/css/personal.css',
-    'static/desktop/css/faq.css',
-    'static/desktop/css/news.css',
-    'static/desktop/css/reviews.css',
-    'static/desktop/css/start.css',
-    'static/desktop/css/verification.css',
-    'static/desktop/css/converting.css',
-    'static/desktop/css/textpage.css',
-    'static/desktop/css/dev-style.css',
-    'static/desktop/css/320.css'
+    'static/css/main.css',
+    'static/css/header.css',
+    'static/css/footer.css'
 ];
 
 var js_files = [
-    'static/desktop/js/dev-script.js'
+    'static/js/scripts.js'
 ];
 
 function arrayConcat(a, b) {
@@ -67,8 +33,8 @@ function arrayConcat(a, b) {
 }
 
 gulp.task('watch', function() {
-    gulp.watch('static/desktop/js/*.js', ['js']);
-    gulp.watch('static/desktop/css/*.css', ['css']);
+    gulp.watch('static/js/*.js', ['js']);
+    gulp.watch('static/css/*.css', ['css']);
 
 });
 
